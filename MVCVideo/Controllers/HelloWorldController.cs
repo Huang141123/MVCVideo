@@ -18,19 +18,20 @@ namespace MVCVideo.Controllers
             return View();
         }
 
-        public HelloWorldController() : this(new HelloService())
-        {
+        //public HelloWorldController() : this(new HelloService())
+        //{
             
-        }
+        //}
 
         private IHelloService _helloService;
-        public HelloWorldController(HelloService helloService)
-        {
-            _helloService = helloService;
-        }
+        //public HelloWorldController(HelloService helloService)
+        //{
+        //    _helloService = helloService;
+        //}
 
         public String Welcome()
         {
+            _helloService = new HelloService();
             return _helloService.GetHelloWorld();
         }
     }
